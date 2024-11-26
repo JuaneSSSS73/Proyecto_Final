@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Solar - Solar Energy Website Template</title>
+    <title>ELT Mastery</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -27,8 +27,25 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <div class="btn-bottom-left">
+        <button class="btn btn-lg btn-primary" style="font-size: 20px; border-radius: 20px;" onclick="showBox()">Mensajes</button>
+    </div>
+    <div class="fixed-box" id="fixedBox"> <span class="close-btn" onclick="closeBox()">X</span> 
+        <span id="randomPhrase"></span>
+    </div>
+    <script>
+        const phrases = [ "Domina el inglés con ELT Mastery.", "Tu camino al inglés perfecto comienza aquí.", "Conviértete en un experto en inglés con nosotros.", "ELT Mastery: Donde el aprendizaje se hace fácil.", "Descubre la excelencia en la enseñanza del inglés con ELT Mastery.", "Transforma tu futuro con el poder del inglés en ELT Mastery.", "Aprende inglés como nunca antes con ELT Mastery.", "El éxito en el inglés comienza con ELT Mastery.", "Tu camino hacia la fluidez en inglés inicia aquí en ELT Mastery.", "El inglés fácil, rápido y efectivo con ELT Mastery.", "Embárcate en la aventura del inglés con ELT Mastery.", "Desarrolla tu potencial con ELT Mastery.", "Supera tus límites y domina el inglés con ELT Mastery.", "ELT Mastery: La llave maestra para tu futuro profesional." ];
+
+        function showBox() { 
+            const randomIndex = Math.floor(Math.random() * phrases.length); 
+            const randomPhrase = phrases[randomIndex]; 
+            document.getElementById('randomPhrase').textContent = randomPhrase; document.getElementById('fixedBox').style.display = 'flex'; }
+        function closeBox() { 
+            document.getElementById('fixedBox').style.display = 'none'; 
+        }
+    </script>    
     <!-- Navbar Start -->
-    <nav id="nav" class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5" style="background-color: purple;" >
+    <nav id="nav" class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5" style="background-color: lightblue;" >
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="display-4 text-white text-uppercase m-0"><img src="/img/97df0609-daa4-4ec8-bdc5-dc40836ce85b-removebg-preview.png" alt=""></h1>
         </a>
@@ -40,14 +57,14 @@
                 <a href="#home" class="nav-item nav-link active">Inicio</a>
                 <a href="#about" class="nav-item nav-link">Acerca de</a>
                 <a href="#service" class="nav-item nav-link">Servicio</a>
-                <a href="#project" class="nav-item nav-link">Clases</a>
+                <a href="#Video" class="nav-item nav-link">Video</a>
             </div>
             <a href="index.html" class="navbar-brand bg-primary px-4 mx-3 d-none d-lg-block">
                 <h1 class="display-4 text-white text-uppercase m-0" ><img src="img/97df0609-daa4-4ec8-bdc5-dc40836ce85b-removebg-preview.png" alt="" style="display: flex; height: 80px; width: auto;"></h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#team" class="nav-item nav-link">Equipo</a>
-                <a href="#faqs" class="nav-item nav-link">FAQs</a>
+                <a href="#faqs" class="nav-item nav-link">Obtener</a>
+                <a href="#Escoger" class="nav-item nav-link"">FAQs</a>
                 <a href="#testimonial" class="nav-item nav-link">Testimonios</a>
                 <a href="#contact" class="nav-item nav-link">Contacto</a>
             </div>
@@ -66,7 +83,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-blue text-uppercase mb-4" id="CarruselTitulo"style="letter-spacing: 3px; font-size: 40px;">ELT mastery</h4>
                             <h3 class="display-2 font-secondary text-white mb-4" style="font-size: 50px;">Más que un idioma, una oportunidad.</h3>
-                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Obtener una cotización</a>
+                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Obtener una asesoría gratis</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +93,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-blue text-uppercase mb-4" id="CarruselTitulo1" style="letter-spacing: 3px; font-size: 40px;">ELT mastery</h4>
                             <h3 class="display-2 font-secondary text-white mb-4" style="font-size: 50px;">Abre tu mundo, palabra por palabra.</h3>
-                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Obtener una cotización</a>
+                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Obtener una asesoría gratis</a>
                         </div>
                     </div>
                 </div>
@@ -95,6 +112,23 @@
     </div>
     <!-- Carousel End -->
 
+<div>
+    <div class="container-fluid py-5" id="Video">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Video</h6>
+                <h1 class="font-secondary display-4">English Video</h1>
+            </div>
+        <div class="row justify-content-center" >
+                <video  width="" height="350" controls autoplay muted id="v3">
+                    <source src="English Speaking Practice.mp4" type ="video/mp4">
+                </video>
+        </div>
+
+        </div>
+        
+    </div>
+</div>
 
     <!-- About Start -->
 <div>
@@ -102,13 +136,13 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/658de412b2e61239cd5f690f_curso-de-ingles-a-domicilio.webp" alt="">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/658de412b2e61239cd5f690f_curso-de-ingles-a-domicilio.webp" alt="" id="t7">
                 </div>
                 <div class="col-lg-7">
                     <h6 id="acr" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px; font-size: 20px;">Acerca de nosotros</h6>
                     <h1 class="display-4 mb-3"><span class="text-primary">10+ años de expereciencia</span> En ELT Mastery</h1>
                     <p>Somos una academia especializada en la enseñanza del idioma inglés, comprometida con ayudarte a alcanzar tus metas personales, académicas y profesionales. Nuestro enfoque combina metodologías innovadoras, profesores altamente capacitados y recursos tecnológicos de última generación para garantizar una experiencia de aprendizaje dinámica, efectiva y personalizada. </p>
-                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
+                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong4">Leer más</a>
                 </div>
             </div>
         </div>
@@ -123,14 +157,14 @@
         <div class="container-fluid py-5" id="service">
             <div class="container py-5">
                 <div class="section-title position-relative text-center">
-                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px; font-size: 20px;">Servicio</h6>
-                    <h1 class="font-secondary display-4">Lo que ofrecemos</h1>
+                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Servicio</h6>
+                    <h1 class="font-secondary display-4" style="font-size: 35px;">Lo que ofrecemos</h1>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 mb-3">
                         <div class="product-item mb-2">
                             <div class="product-img">
-                                <img class="img-fluid" src="img/modal1.avif" alt="" style="height: 150px;" width="auto">
+                                <img class="img-fluid" src="img/modal1.avif" alt="" style="height: 200px;" width="">
                                 <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                     <i class="fa fa-2x fa-plus text-white"></i>
                                 </a>
@@ -143,12 +177,12 @@
                     <div class="col-lg-4 mb-3">
                         <div class="product-item mb-2">
                             <div class="product-img">
-                                <img class="img-fluid" src="img/modal2.webp" alt="" style="height: 150px;" width="auto">
+                                <img class="img-fluid" src="img/modal2.webp" alt="" style="height: 200px;" width="500px">
                                 <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
                                     <i class="fa fa-2x fa-plus text-white"></i>
                                 </a>
                             </div>
-                            <div class="bg-secondary text-center p-4">
+                            <div class="bg-secondary text-center p-4" style="height: 115px;">
                                 <h3 class="m-0">Inglés para propósitos específicos</h3>
                             </div>
                         </div>
@@ -156,13 +190,13 @@
                     <div class="col-lg-4 mb-3">
                         <div class="product-item mb-2">
                             <div class="product-img">
-                                <img class="img-fluid" src="img/modal345.webp" alt="" style="height: 150px; width: auto;">
+                                <img class="img-fluid" src="img/modal345.webp" alt="" style="height: 200px;" width="500px">
                                 <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3">
                                     <i class="fa fa-2x fa-plus text-white"></i>
                                 </a>
                             </div>
                             <div class="bg-secondary text-center p-4">
-                                <h3 class="m-0">Wind Generator</h3>
+                                <h3 class="m-0">Preparación para exámenes</h3>
                             </div>
                         </div>
                     </div>
@@ -175,177 +209,77 @@
 
 
     <!-- Gallery Start -->
-    <div class="container-fluid bg-gallery" id="project" style="padding: 120px 0; margin: 90px 0;">
-        <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
-            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Project</h6>
-            <h1 class="font-secondary display-4 text-white">Project Photo Gallery</h1>
-        </div>
-        <div class="owl-carousel gallery-carousel">
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-1.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
+    <div class="container steps-section " style="background-color: white;" id="faqs">
+        <h6 class="text-uppercase text-primary mb-3"style="letter-spacing: 3px; " id="obt">Obtener</h6>
+        <h2 class="text-center mb-5 section-title position-relative text-center"" id="t2" style="font-size: 35px;">Cómo obtener el servicio de ELT Mastery</h2> 
+        <div class="row"> 
+            <div class="col-md-4 text-center step"> 
+                <div class="step-icon"> 
+                    <i class="fas fa-search"></i> 
+                </div> 
+                <h3 class="step-title">Paso 1: Búsqueda</h3> 
+                <p>Busca nuestros servicios en nuestra página web y revisa los diferentes programas que ofrecemos.</p> 
+            </div> 
+            <div class="col-md-4 text-center step"> 
+                <div class="step-icon"> 
+                    <i class="fas fa-user"></i> 
+                </div> 
+                <h3 class="step-title">Paso 2: Registro</h3> 
+                <p>Regístrate en nuestra plataforma llenando el formulario con tus datos personales.</p> </div> 
+                <div class="col-md-4 text-center step"> 
+                    <div class="step-icon"> 
+                        <i class="fas fa-calendar-check"></i> 
+                    </div> 
+                    <h3 class="step-title">Paso 3: Inscripción</h3> 
+                    <p>Inscríbete en el programa que mejor se adapte a tus necesidades y horarios.</p> 
+                </div> 
+            </div> 
+            <div class="row"> 
+                <div class="col-md-4 text-center step"> 
+                    <div class="step-icon"> 
+                        <i class="fas fa-chalkboard-teacher"></i> 
+                    </div> 
+                    <h3 class="step-title">Paso 4: Clases</h3> 
+                    <p>Asiste a las clases en el horario establecido y comienza a mejorar tu inglés.</p> </div> <div class="col-md-4 text-center step"> 
+                        <div class="step-icon"> 
+                            <i class="fas fa-graduation-cap"></i> 
+                        </div> 
+                        <h3 class="step-title">Paso 5: Certificación</h3> <p>Completa el programa y recibe tu certificación de ELT Mastery.</p> 
+                    </div> 
+                </div> 
             </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-2.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-3.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-4.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-5.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
-                <a class="btn btn-primary" href="img/gallery-6.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Gallery End -->
-
-
-    <!-- Team Start -->
-    <div class="container-fluid py-5" id="team">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Team</h6>
-                <h1 class="font-secondary display-4">Meet The Team</h1>
-            </div>
-            <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-                <div class="col-lg-6 p-0">
-                    <div class="row m-0">
-                        <div class="col-sm-6 p-0 text-center">
-                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                                <h5 class="mb-2">Donald John</h5>
-                                <p class="text-muted font-italic mb-2">CEO & Founder</p>
-                                <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem</p>
-                                <div class="position-relative mb-2">
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 p-0" style="min-height: 300px;">
-                            <img class="position-absolute w-100 h-100" src="img/team-1.jpg" style="object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-                <div class="col-lg-6 p-0">
-                    <div class="row m-0">
-                        <div class="col-sm-6 p-0" style="min-height: 300px;">
-                            <img class="position-absolute w-100 h-100" src="img/team-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-sm-6 p-0 text-center">
-                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                                <h5 class="mb-2">Adam Phillips</h5>
-                                <p class="text-muted font-italic mb-2">Engineer</p>
-                                <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem</p>
-                                <div class="position-relative mb-2">
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-                <div class="col-lg-6 p-0">
-                    <div class="row m-0">
-                        <div class="col-sm-6 p-0 text-center">
-                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                                <h5 class="mb-2">Thomas Olsen</h5>
-                                <p class="text-muted font-italic mb-2">Engineer</p>
-                                <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem</p>
-                                <div class="position-relative mb-2">
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 p-0" style="min-height: 300px;">
-                            <img class="position-absolute w-100 h-100" src="img/team-3.jpg" style="object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-lg-end m-0">
-                <div class="col-lg-6 p-0">
-                    <div class="row m-0">
-                        <div class="col-sm-6 p-0" style="min-height: 300px;">
-                            <img class="position-absolute w-100 h-100" src="img/team-4.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-sm-6 p-0 text-center">
-                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                                <h5 class="mb-2">James Alien</h5>
-                                <p class="text-muted font-italic mb-2">Engineer</p>
-                                <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem</p>
-                                <div class="position-relative mb-2">
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
 
 
     <!-- FAQs Start -->
-    <div class="container-fluid py-5" id="faqs">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">FAQs</h6>
-                <h1 class="display-4">You Should Know</h1>
+    <div class="container why-choose-section" style="background-color: white;" id="Escoger">
+        <h6 class="text-uppercase text-primary mb-3"style="letter-spacing: 3px; " id="obt">FAQs</h6>
+        <h2 class="why-choose-title section-title position-relative text-center""  style="font-size: 35px;">¿Por qué Escoger ELT Mastery?</h2>
+        <div class="row">
+            <div class="col-md-4 why-choose-item">
+                <div class="text-center">
+                    <i class="fas fa-star why-choose-icon"></i>
+                    <div class="why-choose-content">
+                        <h3 class="why-choose-heading">Enseñanza de Calidad</h3>
+                        <p class="why-choose-description">Nuestros profesores altamente calificados te guiarán en tu viaje hacia la fluidez en inglés.</p>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <h3 class="mb-4">Why Switch to Solar?</h3>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Vero dolor amet no eos ipsum erat</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Lorem tempor tempor gubergren dolor dolor dolor</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Nonumy tempor dolores sadipscing duo</h5>
-                        <h5 class="mb-0"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Kasd dolor ea dolores ut nonumy</h5>
+            <div class="col-md-4 why-choose-item">
+                <div class="text-center">
+                    <i class="fas fa-users why-choose-icon"></i>
+                    <div class="why-choose-content">
+                        <h3 class="why-choose-heading">Ambiente Colaborativo</h3>
+                        <p class="why-choose-description">Aprenderás junto a otros estudiantes motivados en un ambiente de apoyo y colaboración.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <h3 class="mb-4">Why Choose Us?</h3>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Vero dolor amet no eos ipsum erat</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Lorem tempor tempor gubergren dolor dolor dolor</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Nonumy tempor dolores sadipscing duo</h5>
-                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Kasd dolor ea dolores ut nonumy</h5>
+            </div>
+            <div class="col-md-4 why-choose-item">
+                <div class="text-center">
+                    <i class="fas fa-certificate why-choose-icon"></i>
+                    <div class="why-choose-content">
+                        <h3 class="why-choose-heading">Certificación Reconocida</h3>
+                        <p class="why-choose-description">Obtén una certificación reconocida que avala tus habilidades en inglés y te abre puertas a nuevas oportunidades.</p>
                     </div>
-                </div>
-                <div class="col-md-12 text-center pt-3">
-                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll" href="#contact">Get A Quote</a>
                 </div>
             </div>
         </div>
@@ -354,32 +288,40 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5" id="testimonial">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Testimonial</h6>
-                <h1 class="display-4">Our Clients Say</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 100px;">
-                            <p style="font-size: 22px;">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 100px;">
-                            <p style="font-size: 22px;">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
+    <section class="testimonial-section text-center" style="background-color: white;" id="testimonial">
+        <div class="container">
+            <h6 class="text-uppercase text-primary mb-3"style="letter-spacing: 3px; " id="obt">Testimonios</h6>
+            <h2 class="mb-4 section-title position-relative " style="color: black; font-size: 35px;" >Estudiantes</h2>
+            <p class="mb-5 text-muted">Descubre lo que dicen nuestros estudiantes</p>
+            <div class="row gy-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4">
+                        <img src="https://via.placeholder.com/80" alt="Estudiante 1" class="testimonial-img mb-3">
+                        <p class="testimonial-name" style="color: lightblue;">Juan Pérez</p>
+                        <p class="testimonial-text">"Me encanta la metodología interactiva de ELT Mastery. Mejoré mi inglés en tiempo récord y me siento más seguro al hablar."</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4" style="color: lightblue;">
+                        <img src="https://via.placeholder.com/80" alt="Estudiante 2" class="testimonial-img mb-3">
+                        <p class="testimonial-name">Laura Gómez</p>
+                        <p class="testimonial-text">"Los profesores son excepcionales y siempre están disponibles para ayudar. Sin duda, una experiencia increíble."</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4">
+                        <img src="https://via.placeholder.com/80" alt="Estudiante 3" class="testimonial-img mb-3">
+                        <p class="testimonial-name" style="color: lightblue;">Carlos Ramírez</p>
+                        <p class="testimonial-text">"La flexibilidad en los horarios y las clases personalizadas hicieron que aprender inglés fuera muy fácil para mí."</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
     <!-- Testimonial End -->
 
 
@@ -387,8 +329,8 @@
     <div class="container-fluid py-5" id="contact">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Contact</h6>
-                <h1 class="font-secondary display-4">Get In Touch</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Contacto</h6>
+                <h1 class="font-secondary display-4">Ponerse en contacto</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -397,24 +339,24 @@
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="name" placeholder="Tu nombre" required="required" data-validation-required-message="Por favor, ingresa tu nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" id="email" placeholder="Tu Email" required="required" data-validation-required-message="Por favor, ingresa tu email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por favor, ingresa un asunto" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="6" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Por favor, ingresa un mensaje"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton" style="border-radius: 20px;">Enviar Mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -426,26 +368,26 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-        <div class="row pt-5">
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;" id="t4">
+        <div class="row pt-5" id="t3">
             <div class="col-12 mb-4 px-4">
                 <div class="row mb-5 p-4" style="background: rgba(256, 256, 256, .05);">
                     <div class="col-md-4">
                         <div class="text-md-center">
-                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Our Office</h5>
-                            <p class="mb-4 m-md-0">123 Street, New York, USA</p>
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Nuestra sede</h5>
+                            <p class="mb-4 m-md-0">Calle 45 #67-89, Medellín, Colombia</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="text-md-center">
-                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Email Us</h5>
-                            <p class="mb-4 m-md-0">info@example.com</p>
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Escríbenos</h5>
+                            <p class="mb-4 m-md-0">info@EltMastery.edu.co</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="text-md-center">
-                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
-                            <p class="m-0">+012 345 6789</p>
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Llámanos</h5>
+                            <p class="m-0">+57 300 1234567</p>
                         </div>
                     </div>
                 </div>
@@ -453,42 +395,40 @@
             <div class="col-lg-7 col-md-12">
                 <div class="row">
                     <div class="col-md-6 mb-5">
-                        <p>Et et amet ut elitr ipsum sit dolor dolor dolore. Sit accusam elitr ut diam sit rebum. Eirmod duo kasd diam vero labore sea, est et et lorem ut at erat, gubergren ipsum et ipsum elitr et rebum rebum</p>
-                        <div class="d-flex justify-content-start mt-4">
+                        <p id="Texto-Footer">En ELT MASTERY, ofrecemos cursos y coaching personalizados para dominar el inglés con métodos innovadores y tecnología avanzada. Nuestra misión es ayudarte a alcanzar tus metas y transformar tu futuro.</p>
+                        <div class="d-flex justify-content-start mt-4" id="n8">
                             <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f" ></i></a>
                             <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram" ></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 mb-5">
-                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Products</h5>
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Servicios</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Solar System</a>
-                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Wind Turbine</a>
-                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Wind Generator</a>
-                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Solar Energy</a>
-                            <a class="text-white btn-scroll" href="#service"><i class="fa fa-angle-right mr-2"></i>Solar Panel</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Clases de inglés general</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Inglés para propósitos específicos</a>
+                            <a class="text-white btn-scroll mb-2" href="#service"><i class="fa fa-angle-right mr-2"></i>Preparación de exámenes</a>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 mb-5">
-                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 1px;">¡Mantente informado!</h5>
+                <p style="text-align: justify;">¡Ingresa tu correo electrónico para que puedas recibir notificaciones sobre ofertas y nuevas implementaciones que hagamos en ELT MASTERY!</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Correo Electrónico">
                         <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
+                            <button class="btn btn-primary px-4">Registrate</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
-        <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+    <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5 " style="border-color: rgba(256, 256, 256, .05) !important;" id="">
+        <p class="m-0 text-white">&copy; <a href="#">ELT MASTERY</a>. Todos los derechos reservados a Juan Esteban Cadavid y Angel Manuel Gaviria Ramírez <a href="https://htmlcodex.com"></a></p>
     </div>
     <!-- Footer End -->
 
@@ -527,19 +467,19 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Solar Energy System</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Inglés para propósitos específicos</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img class="img-fluid mb-4" src="img/carousel-1.jpg" alt="">
-                    <p>Hola soy goku!! hola soy Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <img class="img-fluid mb-4" src="img/modal2.webp" alt="">
+                    <p>se enfoca en enseñar el idioma con un propósito particular, adaptado a las necesidades de un contexto específico. Este enfoque es común en áreas como los negocios, la medicina, la tecnología, la academia, y más. A continuación, se detallan sus características, con énfasis en su aplicación académica</p>
+                    <p>Características principales del ESP: </p>
+                    <p>- Se basa en un análisis previo de las necesidades lingüísticas del estudiante. Por ejemplo, un estudiante de posgrado necesitará habilidades específicas como escribir artículos académicos o dar presentaciones en conferencias.</p>
+                    <p>- El contenido está relacionado con disciplinas o áreas específicas como ingeniería, derecho, medicina, o investigación académica.</p>
+                    <p>- Se enseña vocabulario técnico, frases hechas, y estructuras gramaticales relacionadas con el área de estudio.</p>
+                    <p>- Aunque el vocabulario técnico es importante, se da énfasis en cómo usarlo para comunicarse efectivamente.</p>
                 </div>
             </div>
         </div>
@@ -551,24 +491,67 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Solar Energy System</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Preparación para exámenes</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img class="img-fluid mb-4" src="img/carousel-1.jpg" alt="">
-                    <p>Hola soy goku!!  Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
-                    <p>Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam, dolore accusam duo est stet nonumy tempor dolores sadipscing duo. Stet at et nonumy erat et sed.</p>
+                    <img class="img-fluid mb-4" src="img/modal345.webp" alt="">
+                    <p>La preparación de exámenes en ELT Mastery está diseñada para ayudar a los estudiantes a alcanzar sus objetivos de certificación internacional, como IELTS, TOEFL, Cambridge (FCE, CAE, CPE) u otros exámenes específicos. Este servicio combina estrategias personalizadas, materiales auténticos y un enfoque integral en las habilidades requeridas.</p>
+                    <p>Características de la Preparación:</p>
+                    <p>- Se realiza una evaluación para determinar el nivel actual del estudiante y sus fortalezas y áreas de mejora.</p>
+                    <p>Cada curso de preparación se estructura para cubrir las cuatro habilidades evaluadas: </p>
+                    <p>- Reading: técnicas de comprensión rápida (skimming y scanning) y análisis crítico de textos.</p>
+                    <p>- Listening: desarrollo de la capacidad para identificar ideas clave y detalles específicos en diferentes acentos.</p>
+                    <p>- Writing: redacción de ensayos y reportes formales, con énfasis en gramática, coherencia, y vocabulario avanzado.</p>
+                    <p>- Speaking: práctica de respuestas estructuradas, fluidez, y pronunciación en contextos formales e informales.</p>
+                    <p>Se emplean recursos oficiales de los exámenes (guías, ejemplos de preguntas y simulacros) para garantizar que los estudiantes se familiaricen con el formato.</p>
+                    <p>Los estudiantes realizan simulacros completos en condiciones similares a las del examen real.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal -->
+    <!-- Modal 4 -->
+    <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">ELT Mastery: Tu Camino a la Excelencia en Inglés</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mb-4" src="img/97df0609-daa4-4ec8-bdc5-dc40836ce85b-removebg-preview.png" alt="" style="width: 100%;">
+                    <p>ELT Mastery es una academia de inglés de renombre, diseñada para ofrecer una experiencia educativa integral, personalizada y efectiva para estudiantes de todos los niveles y edades. Nuestro enfoque está orientado a desarrollar habilidades lingüísticas sólidas que permitan a nuestros estudiantes alcanzar sus metas personales, académicas y profesionales. Con una metodología moderna y un equipo de expertos, en ELT Mastery transformamos el aprendizaje del inglés en una experiencia enriquecedora y emocionante.</p>
+                    <p>Nuestra Filosofía Educativa</p>
+                    <p>En ELT Mastery, creemos que aprender inglés no es solo adquirir un idioma, sino también abrir puertas a nuevas oportunidades y perspectivas culturales. Por ello, nos enfocamos en: </p>
+                    <p>1. Personalización: Adaptamos nuestro enfoque a las necesidades individuales de cada estudiante, ayudándolos a progresar a su propio ritmo.</p>
+                    <p>2. Excelencia Académica: Ofrecemos cursos basados en estándares internacionales que garantizan un aprendizaje efectivo y resultados medibles.</p>
+                    <p>3. Inmersión Cultural: Promovemos un aprendizaje contextualizado, conectando el idioma con situaciones de la vida real y aspectos culturales relevantes.
+                    </p>
+                    <p>Nuestros Servicios</p>
+                    <p>Cursos de Inglés General:
+                        Diseñados para estudiantes de todos los niveles, desde principiantes hasta avanzados. En estos cursos, desarrollamos las habilidades clave como lectura, escritura, conversación y comprensión auditiva.</p>
+                    <p>Preparación para Exámenes Internacionales:
+                        Ayudamos a los estudiantes a prepararse para certificaciones reconocidas mundialmente como IELTS, TOEFL, Cambrigde Exmams(FCE,CAE,CPE), TOEIC. Estos programas combinan práctica intensiva, simulacros, y estrategias específicas para maximizar el rendimiento en cada sección del examen.</p>
+                    <p>Inglés para Fines Específicos (ESP):
+                        Cursos diseñados para profesionales y estudiantes que necesitan inglés en áreas específicas como negocios, medicina, ingeniería, o derecho.</p>
+                    <p>Compromiso con Nuestros Estudiantes</p>
+                    <p>En ELT Mastery, estamos comprometidos con el éxito de nuestros estudiantes. Nuestro equipo trabaja incansablemente para garantizar que cada persona que confía en nosotros alcance sus metas lingüísticas y logre avanzar en sus estudios, carrera profesional o viajes personales.
+
+                        ¡Únete a nuestra comunidad y descubre cómo el aprendizaje del inglés puede transformar tu futuro!</p>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Scroll to Bottom -->
